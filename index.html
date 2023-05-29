@@ -25,12 +25,14 @@
         }
         
         .nav-link {
-            color: white; /* Change the link color to white */
-            background-color: black; /* Change the background color of the links to black */
+            color: black; /* Change the link color to black */
+            background-color: transparent; /* Remove the background color */
             padding: 10px 20px;
             border-radius: 4px; /* Add rounded corners to the links */
             margin-right: 10px; /* Add some spacing between the links */
             text-decoration: none;
+            border: none; /* Remove the border */
+            cursor: pointer;
         }
         
         .nav-link:hover {
@@ -40,6 +42,7 @@
         .navbar-nav {
             display: flex; /* Display the navigation links horizontally */
             align-items: center; /* Align the links vertically in the center */
+            list-style-type: none; /* Remove the bullet points */
         }
         
         .navbar-nav .nav-item {
