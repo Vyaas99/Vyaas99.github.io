@@ -1,109 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Resume Presentation</title>
+    <title>Long Scrolling Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
         }
         
-        .slide {
-            display: none;
-            text-align: center;
-            padding: 40px;
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
         }
         
-        .slide h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .slide p {
-            font-size: 24px;
-            line-height: 1.5;
+        .section:nth-child(even) {
+            background-color: lightgray;
         }
     </style>
-    <script>
-        let slideIndex = 0;
-        showSlide(slideIndex);
-        
-        function showSlide(n) {
-            const slides = document.getElementsByClassName("slide");
-            if (n >= slides.length) {
-                slideIndex = 0;
-            } else if (n < 0) {
-                slideIndex = slides.length - 1;
-            }
-            
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            
-            slides[slideIndex].style.display = "block";
-        }
-        
-        function changeSlide(n) {
-            showSlide(slideIndex += n);
-        }
-    </script>
 </head>
 <body>
-    <div class="slide">
-        <h1>Personal Information</h1>
-        <p>Name: Vyaas Valsaraj</p>
-        <p>Email: vyaas.valsaraj99@gmail.com</p>
-        <p>Phone: (267) 678-8009</p>
-    </div>
-    
-    <div class="slide">
-        <h1>Education</h1>
-        <p>Masters of Science in Engineering: Scientific Computing</p>
-        <p>University of Pennsylvania</p>
-        <p>May 2024</p>
-    </div>
-    
-    <div class="slide">
-        <h1>Skills</h1>
-        <p>Application Software: Apache Spark ML, Scikit-learn, PyTorch, TensorFlow, Pandas, Bokeh, SQL, Apache Spark, Spark SQL, AWS (Amazon Web Services)</p>
-        <p>Programming Languages: Python, Java, C, MATLAB</p>
-        <p>Leadership: Athletics Team Captain in senior secondary school</p>
-    </div>
-    
-    <div class="slide">
-        <h1>Achievements</h1>
+    <nav>
         <ul>
-            <li>Three-time Individual Champion in athletics in secondary and senior secondary school.</li>
-            <li>Qualified for the finals of CBSE-Zonals of Tamil Nadu in the event of 100m.</li>
-            <li>First Recipient of the Sportsman of the Year award in school.</li>
-            <li>Won bronze medal in inter-college Tamil Nadu-Zonals in 4x100m relay.</li>
-            <li>Won trophies in the sport of soccer in inter-school competitions.</li>
-            <li>Finalists in BITS-Pilani Hyderabad Business Plan competition.</li>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
         </ul>
+    </nav>
+    
+    <div class="section" id="section1">
+        <h1>Section 1</h1>
+        <p>This is the content of section 1.</p>
     </div>
     
-    <div class="slide">
-        <h1>Projects</h1>
-        <ul>
-            <li>Sentiment Analysis on Amazon Fine Food Reviews - May 2023</li>
-            <li>Neural Radiance Fields: Fitting Images and Scenes with MLPs and Volumetric Rendering - May 2023</li>
-            <li>Machine Learning for diabetes - December 2022</li>
-            <li>Face Swapping in two videos - December 2022</li>
-            <li>Deep Learning with PyTorch to classify images in the CIFAR-10 dataset - November 2022</li>
-            <li>Apache Spark ML and sci-kit learn to predict ratings of new Airbnb properties - November 2022</li>
-            <li>Machine Learning Models to predict the ages of human beings from images - November 2022</li>
-            <li>Blending of an object onto another image using Poisson Image Editing - October 2022</li>
-            <li>EMR Cluster and Spark SQL to analyze Amazon Products - October 2022</li>
-            <li>Data analysis to gauge the performance of various airline companies using pandas in Python - September 2022</li>
-            <li>Image Morphing via Delaunay Triangulation - September 2022</li>
-            <li>Console-based chess game simulator using Python - May 2021</li>
-            <li>Simulation of the temperature distribution of a reactor - March 2021</li>
-        </ul>
+    <div class="section" id="section2">
+        <h1>Section 2</h1>
+        <p>This is the content of section 2.</p>
     </div>
     
-    <button onclick="changeSlide(-1)">Previous</button>
-    <button onclick="changeSlide(1)">Next</button>
+    <div class="section" id="section3">
+        <h1>Section 3</h1>
+        <p>This is the content of section 3.</p>
+    </div>
 </body>
 </html>
-
